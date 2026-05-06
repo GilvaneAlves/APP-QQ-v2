@@ -4,6 +4,7 @@ import SearchPage from '../pages/SearchPage';
 import ProductPage from '../pages/ProductPage';
 import AdminPage from '../pages/AdminPage';
 import BarcodeScanner from '../components/BarcodeScanner';
+import ScannerSearchPage from '../pages/ScannerSearchPage';
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
           <ul style={{ listStyle: 'none', display: 'flex', gap: '1rem', margin: 0, padding: 0 }}>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/scanner">Scanner</Link></li>
+            <li><Link to="/scanner-search">Scanner Search</Link></li>
             <li><Link to="/search">Search</Link></li>
             <li><Link to="/admin">Admin</Link></li>
           </ul>
@@ -26,6 +28,7 @@ const AppRoutes = () => {
                 <BarcodeScanner />
               </div>
             } />
+            <Route path="/scanner-search" element={<ScannerSearchPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/admin" element={<AdminPage />} />
