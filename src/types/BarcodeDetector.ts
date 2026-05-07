@@ -14,8 +14,8 @@ export type BarcodeFormat =
     | "unknown";
 
 export interface Point2D {
-    x: number;
-    y: number;
+    readonly x: number;
+    readonly y: number;
 }
 
 export interface DetectedBarcode {
